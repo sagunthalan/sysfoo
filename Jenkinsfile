@@ -54,6 +54,12 @@ pipeline {
       }
     }
 
+    stage('Deploy to Dev') {
+      steps {
+        sh 'docker-compose up -d'
+      }
+    }
+
   }
   tools {
     maven 'Maven 3.6.3'
