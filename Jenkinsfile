@@ -48,7 +48,6 @@ pipeline {
             def dockerImage = docker.build("sagunthala/sysfoo:v${env.BUILD_ID}", "./")
             dockerImage.push()
             dockerImage.push("latest")
-            dockerImage.push("dev")
           }
         }
 
